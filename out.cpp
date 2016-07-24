@@ -22,7 +22,7 @@ This file is part of the GNU Binutils and/or GDB, the GNU debugger.
 
 */
 
-#include "cris.hpp"
+#include "fr30.hpp"
 
   
 extern void out_print_m4(op_t &x, ea_t pc);
@@ -31,7 +31,7 @@ extern void out_print_hi_register_list_st(op_t &x, ea_t pc);
 extern void out_print_low_register_list_ld(op_t &x, ea_t pc);
 extern void out_print_low_register_list_st(op_t &x, ea_t pc);
 
-void idaapi cris_data(ea_t ea)
+void idaapi fr30_data(ea_t ea)
 {
   gl_name = 1;
   intel_data(ea);

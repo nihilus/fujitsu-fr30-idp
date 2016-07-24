@@ -22,7 +22,7 @@ This file is part of the GNU Binutils and/or GDB, the GNU debugger.
 
 */
 
-#include "cris.hpp"
+#include "fr30.hpp"
 
 instruc_t Instructions[] = {
   { "", 0 }, // unknown

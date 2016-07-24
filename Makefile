@@ -1,4 +1,4 @@
-PROC=cris
+PROC=fr30
 
 O1= idp
 ifneq ($(or $(__MAC__),$(__LINUX__)),)

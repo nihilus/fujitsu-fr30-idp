@@ -22,7 +22,7 @@ This file is part of the GNU Binutils and/or GDB, the GNU debugger.
 
 */
 
-#include "cris.hpp"
+#include "fr30.hpp"
 
  /* The size of an "int" needed to hold an instruction word.
    This is usually 32 bits, but some architectures needs 64 bits.  */

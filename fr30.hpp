@@ -41,8 +41,8 @@ This file is part of the GNU Binutils and/or GDB, the GNU debugger.
 #include "ins.hpp"
 
 /* needed for cgen.h */
-#define CGEN_ARCH cris
-#define CGEN_SYM(s) cris##_cgen_##s
+#define CGEN_ARCH fr30
+#define CGEN_SYM(s) fr30##_cgen_##s
 
 /* for referring to operand type in cmd */
 #define cgen_optype specval_shorts.low
@@ -88,7 +88,7 @@ typedef enum cgen_hw_attr {
 #define CGEN_ATTR_CGEN_HW_PC_VALUE(attrs) (((attrs)->bool_ & (1 << CGEN_HW_PC)) != 0)
 #define CGEN_ATTR_CGEN_HW_PROFILE_VALUE(attrs) (((attrs)->bool_ & (1 << CGEN_HW_PROFILE)) != 0)
 
-/* Enum declaration for cris hardware types.  */
+/* Enum declaration for fr30 hardware types.  */
 typedef enum cgen_hw_type {
   HW_H_MEMORY, HW_H_SINT, HW_H_UINT, HW_H_ADDR
  , HW_H_IADDR, HW_H_PC, HW_H_GR, HW_H_CR
@@ -126,7 +126,7 @@ typedef enum cgen_operand_attr {
 #define CGEN_ATTR_CGEN_OPERAND_SEM_ONLY_VALUE(attrs) (((attrs)->bool_ & (1 << CGEN_OPERAND_SEM_ONLY)) != 0)
 #define CGEN_ATTR_CGEN_OPERAND_HASH_PREFIX_VALUE(attrs) (((attrs)->bool_ & (1 << CGEN_OPERAND_HASH_PREFIX)) != 0)
 
-/* Enum declaration for cris operand types.  */
+/* Enum declaration for fr30 operand types.  */
 typedef enum cgen_operand_type {
   CRIS_OPERAND_PC, CRIS_OPERAND_RI, CRIS_OPERAND_RJ, CRIS_OPERAND_RIC
  , CRIS_OPERAND_RJC, CRIS_OPERAND_CRI, CRIS_OPERAND_CRJ, CRIS_OPERAND_RS1
@@ -158,6 +158,6 @@ int  idaapi ana( void );
 int  idaapi emu( void );
 void idaapi out( void );
 bool idaapi outop( op_t &op );
-void idaapi cris_data(ea_t ea);
+void idaapi fr30_data(ea_t ea);
 
 #endif
