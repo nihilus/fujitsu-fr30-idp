@@ -109,11 +109,11 @@ static bool cgen_outop(op_t &x, uint16 opindex, ea_t pc)
       break;
     case FR30_OPERAND_LABEL12 :
       if (!out_name_expr(x, x.addr))
-        OutValue(x, OOFW_ADDR|OOFS_NOSIGN|OOF_NUMBER);
+        OutValue(x, OOF_ADDR|OOFS_NOSIGN|OOF_NUMBER);
       break;
     case FR30_OPERAND_LABEL9 :
       if (!out_name_expr(x, x.addr))
-        OutValue(x, OOFW_ADDR|OOFS_NOSIGN|OOF_NUMBER);
+        OutValue(x, OOF_ADDR|OOFS_NOSIGN|OOF_NUMBER);
       break;
     case FR30_OPERAND_M4 :
       out_print_m4(x, pc);

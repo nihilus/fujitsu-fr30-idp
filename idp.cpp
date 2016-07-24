@@ -96,7 +96,7 @@ static void idaapi footer(void)
 
 //--------------------------------------------------------------------------
 
-static const asm_t crisasm =
+static const asm_t fr30asm =
 {
   0,
   0,
@@ -149,7 +149,7 @@ static const asm_t crisasm =
   NULL,    // sizeof
 };
 
-static const asm_t *const asms[] = { &crisasm, NULL };
+static const asm_t *const asms[] = { &fr30asm, NULL };
 
 //-----------------------------------------------------------------------
 static const uchar retcode_1[] = { 0x02, 0x70 };
@@ -162,7 +162,7 @@ static const bytes_t retcodes[] =
 
 //-----------------------------------------------------------------------
 // use simple translation
-static ea_t idaapi cris_translate(ea_t base, adiff_t offset)
+static ea_t idaapi fr30_translate(ea_t base, adiff_t offset)
 {
   return base+offset;
 }
@@ -216,7 +216,7 @@ idaman processor_t ida_module_data LPH =
 
   out,
   outop,
-  cris_data,    //intel_data,
+  fr30_data,    //intel_data,
   NULL,       // compare operands
   NULL,       // can have type
 
@@ -236,10 +236,10 @@ idaman processor_t ida_module_data LPH =
   NULL,                 // No known code start sequences
   retcodes,
 
-  0, CRIS_INSN_RI_26+1,
+  0, /*FR30_INSN_RI_26+*/1,
   Instructions,
   NULL,                 // int  (*is_far_jump)(int icode);
-  cris_translate,        // Translation function for offsets
+  fr30_translate,        // Translation function for offsets
   0,                    // int tbyte_size;  -- doesn't exist
   NULL,                 // int (*realcvt)(void *m, ushort *e, ushort swt);
   { 0, 0, 0, 0 },       // char real_width[4];
@@ -256,7 +256,7 @@ idaman processor_t ida_module_data LPH =
   NULL,                 // int (*get_frame_retsize(func_t *pfn)
   NULL,                 // void (*gen_stkvar_def)(char *buf,const member_t *mptr,int32 v);
   gen_spcdef,           // Generate text representation of an item in a special segment
-  CRIS_INSN_RET,         // Icode of return instruction. It is ok to give any of possible return instructions
+  FR30_INSN_RET,         // Icode of return instruction. It is ok to give any of possible return instructions
   NULL,                 // const char *(*set_idp_options)(const char *keyword,int value_type,const void *value);
   NULL,                 // int (*is_align_insn)(ea_t ea);
   NULL,                 // mvm_t *mvm;

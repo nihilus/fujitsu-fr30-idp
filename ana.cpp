@@ -97,7 +97,9 @@ int idaapi ana( void )
   FR30_INSN_TYPE itype;
 
   CGEN_INSN_WORD insn;
+  CGEN_INSN_WORD base_insn;
   CGEN_INSN_WORD entire_insn;
+
   ea_t pc;
   get_data_value(cmd.ea, (uval_t *)buffer, 2);
   insn = get_insn_value(buffer, 16);
@@ -335,7 +337,6 @@ int idaapi ana( void )
       case 152 : itype = FR30_INSN_BEORL; goto extract_sfmt_bandl;
       case 153 : itype = FR30_INSN_BEORH; goto extract_sfmt_bandl;
       case 154 : itype = FR30_INSN_EOR; goto extract_sfmt_and;
-      case 155 : itype = FR30_INSN_LDI20; goto extract_sfmt_ldi20;
       case 156 : itype = FR30_INSN_EORM; goto extract_sfmt_andm;
       case 157 : itype = FR30_INSN_EORH; goto extract_sfmt_andh;
       case 158 : itype = FR30_INSN_EORB; goto extract_sfmt_andb;
@@ -362,7 +363,6 @@ int idaapi ana( void )
             if ((base_insn & 0xffff) == 0x9f70)
               { itype = FR30_INSN_DIV4S; goto extract_sfmt_div4s; }
             itype = FR30_INSN_X_INVALID; goto extract_sfmt_empty;
-          case 8 : itype = FR30_INSN_LDI32; goto extract_sfmt_ldi32;
           case 9 :
             if ((base_insn & 0xffff) == 0x9f90)
               { itype = FR30_INSN_LEAVE; goto extract_sfmt_leave; }
@@ -1067,66 +1067,6 @@ int idaapi ana( void )
     cmd.itype = itype;
     cmd.size = 2;
     return 2;
-  }
-
- extract_sfmt_ldi20:
-  {
-    CGEN_INSN_WORD insn = base_insn;
-    UINT f_i20_16;
-    UINT f_i20_4;
-    UINT f_Ri;
-    UINT f_i20;
-    /* Contents of trailing part of insn.  */
-    UINT word_1;
-
-  word_1 = GETIMEMUHI (current_cpu, pc + 2);
-    f_i20_16 = (0|(EXTRACT_MSB0_UINT (word_1, 16, 0, 16) << 0));
-    f_i20_4 = EXTRACT_MSB0_UINT (insn, 16, 8, 4);
-    f_Ri = EXTRACT_MSB0_UINT (insn, 16, 12, 4);
-{
-  f_i20 = ((((f_i20_4) << (16))) | (f_i20_16));
-}
-
-    /* Record the operands  */
-    cmd.Op1.type = o_imm;
-    cmd.Op1.dtyp = get_dtyp_by_size(4);
-    cmd.Op1.value = f_i20;
-    cmd.Op1.cgen_optype = FR30_OPERAND_I20;
-    cmd.Op2.type = o_reg;
-    cmd.Op2.reg = REGS_HW_H_GR_BASE + f_Ri;
-    cmd.Op2.cgen_optype = FR30_OPERAND_RI;
-
-    cmd.itype = itype;
-    cmd.size = 4;
-    return 4;
-  }
-
- extract_sfmt_ldi32:
-  {
-    CGEN_INSN_WORD insn = base_insn;
-    UINT f_i32;
-    UINT f_Ri;
-    /* Contents of trailing part of insn.  */
-    UINT word_1;
-    UINT word_2;
-
-  word_1 = GETIMEMUHI (current_cpu, pc + 2);
-  word_2 = GETIMEMUHI (current_cpu, pc + 4);
-    f_i32 = (0|(EXTRACT_MSB0_UINT (word_2, 16, 0, 16) << 0)|(EXTRACT_MSB0_UINT (word_1, 16, 0, 16) << 16));
-    f_Ri = EXTRACT_MSB0_UINT (insn, 16, 12, 4);
-
-    /* Record the operands  */
-    cmd.Op1.type = o_imm;
-    cmd.Op1.dtyp = get_dtyp_by_size(4);
-    cmd.Op1.value = f_i32;
-    cmd.Op1.cgen_optype = FR30_OPERAND_I32;
-    cmd.Op2.type = o_reg;
-    cmd.Op2.reg = REGS_HW_H_GR_BASE + f_Ri;
-    cmd.Op2.cgen_optype = FR30_OPERAND_RI;
-
-    cmd.itype = itype;
-    cmd.size = 6;
-    return 6;
   }
 
  extract_sfmt_ld:
