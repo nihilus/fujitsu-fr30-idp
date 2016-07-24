@@ -1,4 +1,4 @@
-#include "cris.hpp"
+#include "fr30.hpp"
 
 void out_print_address(op_t &x, ea_t /*pc*/)
 {
@@ -56,7 +56,7 @@ static int idaapi notify(processor_t::idp_notify msgid, ...) // Various messages
         (void)li; // unused variable
         if (machine_type == 0xF00D)
         {
-          *p_procname = "Axis CRIS";
+          *p_procname = "Fujitsu FR30";
           code = 0xF00D;
         }
         else
@@ -100,7 +100,7 @@ static const asm_t crisasm =
 {
   0,
   0,
-  "CRIS assembler",
+  "FR30 assembler",
   0,
   NULL,
   NULL,
@@ -169,8 +169,8 @@ static ea_t idaapi cris_translate(ea_t base, adiff_t offset)
 
 //--------------------------------------------------------------------------
 
-#define FAMILY "Axis CRIS family:"
-static const char *const shnames[] = { "CRIS", NULL };
+#define FAMILY "Fujitsu FR30 family:"
+static const char *const shnames[] = { "FR30", NULL };
 static const char *const lnames[]  = { FAMILY"", NULL };
 
 //--------------------------------------------------------------------------
@@ -179,13 +179,13 @@ static const char *const lnames[]  = { FAMILY"", NULL };
 //      Processor Definition
 //-----------------------------------------------------------------------
 
-#define PLFM_CRIS 0xF00D
+#define PLFM_FR30 0xF00D
 #include "reg.cpp"
 
 idaman processor_t ida_module_data LPH =
 {
   IDP_INTERFACE_VERSION,        // version
-  PLFM_CRIS,                      // id
+  PLFM_FR30,                      // id
   PR_USE32
   |PRN_HEX
   |PR_WORD_INS
