@@ -32,6 +32,7 @@
 #include "../bfd_stdint.h"
 
 typedef int8_t QI;
+typedef uint8_t BI;
 typedef uint8_t UQI;
 
 typedef int16_t HI;

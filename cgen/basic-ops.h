@@ -344,4 +344,151 @@ SUBWORDDISI (DI in, int word)
 
 #endif /* SUBWORD,JOIN */
 
+/* Semantic support utilities.  */
+
+#ifdef SEMOPS_DEFINE_INLINE
+
+SEMOPS_INLINE SI
+ADDCSI (SI a, SI b, BI c)
+{
+  SI res = ADDSI (a, ADDSI (b, c));
+  return res;
+}
+
+SEMOPS_INLINE BI
+ADDCFSI (SI a, SI b, BI c)
+{
+  SI tmp = ADDSI (a, ADDSI (b, c));
+  BI res = ((USI) tmp < (USI) a) || (c && tmp == a);
+  return res;
+}
+
+SEMOPS_INLINE BI
+ADDOFSI (SI a, SI b, BI c)
+{
+  SI tmp = ADDSI (a, ADDSI (b, c));
+  BI res = (((a < 0) == (b < 0))
+	    && ((a < 0) != (tmp < 0)));
+  return res;
+}
+
+SEMOPS_INLINE SI
+SUBCSI (SI a, SI b, BI c)
+{
+  SI res = SUBSI (a, ADDSI (b, c));
+  return res;
+}
+
+SEMOPS_INLINE BI
+SUBCFSI (SI a, SI b, BI c)
+{
+  BI res = ((USI) a < (USI) b) || (c && a == b);
+  return res;
+}
+
+SEMOPS_INLINE BI
+SUBOFSI (SI a, SI b, BI c)
+{
+  SI tmp = SUBSI (a, ADDSI (b, c));
+  BI res = (((a < 0) != (b < 0))
+	    && ((a < 0) != (tmp < 0)));
+  return res;
+}
+
+SEMOPS_INLINE HI
+ADDCHI (HI a, HI b, BI c)
+{
+  HI res = ADDHI (a, ADDHI (b, c));
+  return res;
+}
+
+SEMOPS_INLINE BI
+ADDCFHI (HI a, HI b, BI c)
+{
+  HI tmp = ADDHI (a, ADDHI (b, c));
+  BI res = ((UHI) tmp < (UHI) a) || (c && tmp == a);
+  return res;
+}
+
+SEMOPS_INLINE BI
+ADDOFHI (HI a, HI b, BI c)
+{
+  HI tmp = ADDHI (a, ADDHI (b, c));
+  BI res = (((a < 0) == (b < 0))
+	    && ((a < 0) != (tmp < 0)));
+  return res;
+}
+
+SEMOPS_INLINE HI
+SUBCHI (HI a, HI b, BI c)
+{
+  HI res = SUBHI (a, ADDHI (b, c));
+  return res;
+}
+
+SEMOPS_INLINE BI
+SUBCFHI (HI a, HI b, BI c)
+{
+  BI res = ((UHI) a < (UHI) b) || (c && a == b);
+  return res;
+}
+
+SEMOPS_INLINE BI
+SUBOFHI (HI a, HI b, BI c)
+{
+  HI tmp = SUBHI (a, ADDHI (b, c));
+  BI res = (((a < 0) != (b < 0))
+	    && ((a < 0) != (tmp < 0)));
+  return res;
+}
+
+SEMOPS_INLINE QI
+ADDCQI (QI a, QI b, BI c)
+{
+  QI res = ADDQI (a, ADDQI (b, c));
+  return res;
+}
+
+SEMOPS_INLINE BI
+ADDCFQI (QI a, QI b, BI c)
+{
+  QI tmp = ADDQI (a, ADDQI (b, c));
+  BI res = ((UQI) tmp < (UQI) a) || (c && tmp == a);
+  return res;
+}
+
+SEMOPS_INLINE BI
+ADDOFQI (QI a, QI b, BI c)
+{
+  QI tmp = ADDQI (a, ADDQI (b, c));
+  BI res = (((a < 0) == (b < 0))
+	    && ((a < 0) != (tmp < 0)));
+  return res;
+}
+
+SEMOPS_INLINE QI
+SUBCQI (QI a, QI b, BI c)
+{
+  QI res = SUBQI (a, ADDQI (b, c));
+  return res;
+}
+
+SEMOPS_INLINE BI
+SUBCFQI (QI a, QI b, BI c)
+{
+  BI res = ((UQI) a < (UQI) b) || (c && a == b);
+  return res;
+}
+
+SEMOPS_INLINE BI
+SUBOFQI (QI a, QI b, BI c)
+{
+  QI tmp = SUBQI (a, ADDQI (b, c));
+  BI res = (((a < 0) != (b < 0))
+	    && ((a < 0) != (tmp < 0)));
+  return res;
+}
+
+#endif
+
 #endif /* CGEN_BASIC_OPS_H */
