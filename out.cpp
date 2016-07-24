@@ -1,4 +1,4 @@
-/* CRIS IDP output
+/* FR30 IDP output
 
 THIS FILE IS MACHINE GENERATED WITH CGEN.
 
@@ -41,114 +41,114 @@ static bool cgen_outop(op_t &x, uint16 opindex, ea_t pc)
 {
   switch (opindex)
   {
-    case CRIS_OPERAND_CRI :
+    case FR30_OPERAND_CRI :
       out_register(ph.regNames[x.reg]);
       break;
-    case CRIS_OPERAND_CRJ :
+    case FR30_OPERAND_CRJ :
       out_register(ph.regNames[x.reg]);
       break;
-    case CRIS_OPERAND_R13 :
+    case FR30_OPERAND_R13 :
       out_register(ph.regNames[x.reg]);
       break;
-    case CRIS_OPERAND_R14 :
+    case FR30_OPERAND_R14 :
       out_register(ph.regNames[x.reg]);
       break;
-    case CRIS_OPERAND_R15 :
+    case FR30_OPERAND_R15 :
       out_register(ph.regNames[x.reg]);
       break;
-    case CRIS_OPERAND_RI :
+    case FR30_OPERAND_RI :
       out_register(ph.regNames[x.reg]);
       break;
-    case CRIS_OPERAND_RIC :
+    case FR30_OPERAND_RIC :
       out_register(ph.regNames[x.reg]);
       break;
-    case CRIS_OPERAND_RJ :
+    case FR30_OPERAND_RJ :
       out_register(ph.regNames[x.reg]);
       break;
-    case CRIS_OPERAND_RJC :
+    case FR30_OPERAND_RJC :
       out_register(ph.regNames[x.reg]);
       break;
-    case CRIS_OPERAND_RS1 :
+    case FR30_OPERAND_RS1 :
       out_register(ph.regNames[x.reg]);
       break;
-    case CRIS_OPERAND_RS2 :
+    case FR30_OPERAND_RS2 :
       out_register(ph.regNames[x.reg]);
       break;
-    case CRIS_OPERAND_CC :
+    case FR30_OPERAND_CC :
       OutValue(x, OOF_NUMBER|OOFW_IMM);
       break;
-    case CRIS_OPERAND_CCC :
+    case FR30_OPERAND_CCC :
       OutValue(x, OOF_NUMBER|OOFW_IMM);
       break;
-    case CRIS_OPERAND_DIR10 :
+    case FR30_OPERAND_DIR10 :
       OutValue(x, OOF_NUMBER|OOFW_IMM);
       break;
-    case CRIS_OPERAND_DIR8 :
+    case FR30_OPERAND_DIR8 :
       OutValue(x, OOF_NUMBER|OOFW_IMM);
       break;
-    case CRIS_OPERAND_DIR9 :
+    case FR30_OPERAND_DIR9 :
       OutValue(x, OOF_NUMBER|OOFW_IMM);
       break;
-    case CRIS_OPERAND_DISP10 :
+    case FR30_OPERAND_DISP10 :
       OutValue(x, OOF_SIGNED|OOF_NUMBER|OOFW_IMM);
       break;
-    case CRIS_OPERAND_DISP8 :
+    case FR30_OPERAND_DISP8 :
       OutValue(x, OOF_SIGNED|OOF_NUMBER|OOFW_IMM);
       break;
-    case CRIS_OPERAND_DISP9 :
+    case FR30_OPERAND_DISP9 :
       OutValue(x, OOF_SIGNED|OOF_NUMBER|OOFW_IMM);
       break;
-    case CRIS_OPERAND_I20 :
+    case FR30_OPERAND_I20 :
       OutValue(x, OOF_NUMBER|OOFW_IMM);
       break;
-    case CRIS_OPERAND_I32 :
+    case FR30_OPERAND_I32 :
       OutValue(x, OOF_NUMBER|OOFW_IMM);
       break;
-    case CRIS_OPERAND_I8 :
+    case FR30_OPERAND_I8 :
       OutValue(x, OOF_NUMBER|OOFW_IMM);
       break;
-    case CRIS_OPERAND_LABEL12 :
+    case FR30_OPERAND_LABEL12 :
       if (!out_name_expr(x, x.addr))
         OutValue(x, OOFW_ADDR|OOFS_NOSIGN|OOF_NUMBER);
       break;
-    case CRIS_OPERAND_LABEL9 :
+    case FR30_OPERAND_LABEL9 :
       if (!out_name_expr(x, x.addr))
         OutValue(x, OOFW_ADDR|OOFS_NOSIGN|OOF_NUMBER);
       break;
-    case CRIS_OPERAND_M4 :
+    case FR30_OPERAND_M4 :
       out_print_m4(x, pc);
       break;
-    case CRIS_OPERAND_PS :
+    case FR30_OPERAND_PS :
       out_register(ph.regNames[x.reg]);
       break;
-    case CRIS_OPERAND_REGLIST_HI_LD :
+    case FR30_OPERAND_REGLIST_HI_LD :
       out_print_hi_register_list_ld(x, pc);
       break;
-    case CRIS_OPERAND_REGLIST_HI_ST :
+    case FR30_OPERAND_REGLIST_HI_ST :
       out_print_hi_register_list_st(x, pc);
       break;
-    case CRIS_OPERAND_REGLIST_LOW_LD :
+    case FR30_OPERAND_REGLIST_LOW_LD :
       out_print_low_register_list_ld(x, pc);
       break;
-    case CRIS_OPERAND_REGLIST_LOW_ST :
+    case FR30_OPERAND_REGLIST_LOW_ST :
       out_print_low_register_list_st(x, pc);
       break;
-    case CRIS_OPERAND_S10 :
+    case FR30_OPERAND_S10 :
       OutValue(x, OOF_SIGNED|OOF_NUMBER|OOFW_IMM);
       break;
-    case CRIS_OPERAND_U10 :
+    case FR30_OPERAND_U10 :
       OutValue(x, OOF_NUMBER|OOFW_IMM);
       break;
-    case CRIS_OPERAND_U4 :
+    case FR30_OPERAND_U4 :
       OutValue(x, OOF_NUMBER|OOFW_IMM);
       break;
-    case CRIS_OPERAND_U4C :
+    case FR30_OPERAND_U4C :
       OutValue(x, OOF_NUMBER|OOFW_IMM);
       break;
-    case CRIS_OPERAND_U8 :
+    case FR30_OPERAND_U8 :
       OutValue(x, OOF_NUMBER|OOFW_IMM);
       break;
-    case CRIS_OPERAND_UDISP6 :
+    case FR30_OPERAND_UDISP6 :
       OutValue(x, OOF_NUMBER|OOFW_IMM);
       break;
     default: return 0;
@@ -167,127 +167,119 @@ void idaapi out(void)
   init_output_buffer(buf, sizeof(buf));
   switch (cmd.itype)
   {
-case CRIS_INSN_ADD:
+case FR30_INSN_ADD:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
     OutChar(' ');
     out_one_operand(1);
     break;
-case CRIS_INSN_ADDI:
+case FR30_INSN_ADDI:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
     OutChar(' ');
     out_one_operand(1);
     break;
-case CRIS_INSN_ADD2:
+case FR30_INSN_ADD2:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
     OutChar(' ');
     out_one_operand(1);
     break;
-case CRIS_INSN_ADDC:
+case FR30_INSN_ADDC:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
     OutChar(' ');
     out_one_operand(1);
     break;
-case CRIS_INSN_ADDN:
+case FR30_INSN_ADDN:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
     OutChar(' ');
     out_one_operand(1);
     break;
-case CRIS_INSN_ADDNI:
+case FR30_INSN_ADDNI:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
     OutChar(' ');
     out_one_operand(1);
     break;
-case CRIS_INSN_ADDN2:
+case FR30_INSN_ADDN2:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
     OutChar(' ');
     out_one_operand(1);
     break;
-case CRIS_INSN_SUB:
+case FR30_INSN_SUB:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
     OutChar(' ');
     out_one_operand(1);
     break;
-case CRIS_INSN_SUBC:
+case FR30_INSN_SUBC:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
     OutChar(' ');
     out_one_operand(1);
     break;
-case CRIS_INSN_SUBN:
+case FR30_INSN_SUBN:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
     OutChar(' ');
     out_one_operand(1);
     break;
-case CRIS_INSN_CMP:
+case FR30_INSN_CMP:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
     OutChar(' ');
     out_one_operand(1);
     break;
-case CRIS_INSN_CMPI:
+case FR30_INSN_CMPI:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
     OutChar(' ');
     out_one_operand(1);
     break;
-case CRIS_INSN_CMP2:
+case FR30_INSN_CMP2:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
     OutChar(' ');
     out_one_operand(1);
     break;
-case CRIS_INSN_AND:
+case FR30_INSN_AND:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
     OutChar(' ');
     out_one_operand(1);
     break;
-case CRIS_INSN_OR:
+case FR30_INSN_OR:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
     OutChar(' ');
     out_one_operand(1);
     break;
-case CRIS_INSN_EOR:
+case FR30_INSN_EOR:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
     OutChar(' ');
     out_one_operand(1);
     break;
-case CRIS_INSN_ANDM:
-    OutMnem();
-    out_one_operand(0);
-    out_symbol(',');
-    OutChar(' ');
-    out_symbol('@');
-    out_one_operand(1);
-    break;
-case CRIS_INSN_ANDH:
+case FR30_INSN_ANDM:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
@@ -295,7 +287,7 @@ case CRIS_INSN_ANDH:
     out_symbol('@');
     out_one_operand(1);
     break;
-case CRIS_INSN_ANDB:
+case FR30_INSN_ANDH:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
@@ -303,7 +295,7 @@ case CRIS_INSN_ANDB:
     out_symbol('@');
     out_one_operand(1);
     break;
-case CRIS_INSN_ORM:
+case FR30_INSN_ANDB:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
@@ -311,7 +303,7 @@ case CRIS_INSN_ORM:
     out_symbol('@');
     out_one_operand(1);
     break;
-case CRIS_INSN_ORH:
+case FR30_INSN_ORM:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
@@ -319,7 +311,7 @@ case CRIS_INSN_ORH:
     out_symbol('@');
     out_one_operand(1);
     break;
-case CRIS_INSN_ORB:
+case FR30_INSN_ORH:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
@@ -327,7 +319,7 @@ case CRIS_INSN_ORB:
     out_symbol('@');
     out_one_operand(1);
     break;
-case CRIS_INSN_EORM:
+case FR30_INSN_ORB:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
@@ -335,7 +327,7 @@ case CRIS_INSN_EORM:
     out_symbol('@');
     out_one_operand(1);
     break;
-case CRIS_INSN_EORH:
+case FR30_INSN_EORM:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
@@ -343,7 +335,7 @@ case CRIS_INSN_EORH:
     out_symbol('@');
     out_one_operand(1);
     break;
-case CRIS_INSN_EORB:
+case FR30_INSN_EORH:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
@@ -351,7 +343,7 @@ case CRIS_INSN_EORB:
     out_symbol('@');
     out_one_operand(1);
     break;
-case CRIS_INSN_BANDL:
+case FR30_INSN_EORB:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
@@ -359,7 +351,7 @@ case CRIS_INSN_BANDL:
     out_symbol('@');
     out_one_operand(1);
     break;
-case CRIS_INSN_BORL:
+case FR30_INSN_BANDL:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
@@ -367,7 +359,7 @@ case CRIS_INSN_BORL:
     out_symbol('@');
     out_one_operand(1);
     break;
-case CRIS_INSN_BEORL:
+case FR30_INSN_BORL:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
@@ -375,7 +367,7 @@ case CRIS_INSN_BEORL:
     out_symbol('@');
     out_one_operand(1);
     break;
-case CRIS_INSN_BANDH:
+case FR30_INSN_BEORL:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
@@ -383,7 +375,7 @@ case CRIS_INSN_BANDH:
     out_symbol('@');
     out_one_operand(1);
     break;
-case CRIS_INSN_BORH:
+case FR30_INSN_BANDH:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
@@ -391,7 +383,7 @@ case CRIS_INSN_BORH:
     out_symbol('@');
     out_one_operand(1);
     break;
-case CRIS_INSN_BEORH:
+case FR30_INSN_BORH:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
@@ -399,7 +391,7 @@ case CRIS_INSN_BEORH:
     out_symbol('@');
     out_one_operand(1);
     break;
-case CRIS_INSN_BTSTL:
+case FR30_INSN_BEORH:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
@@ -407,7 +399,7 @@ case CRIS_INSN_BTSTL:
     out_symbol('@');
     out_one_operand(1);
     break;
-case CRIS_INSN_BTSTH:
+case FR30_INSN_BTSTL:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
@@ -415,141 +407,149 @@ case CRIS_INSN_BTSTH:
     out_symbol('@');
     out_one_operand(1);
     break;
-case CRIS_INSN_MUL:
+case FR30_INSN_BTSTH:
+    OutMnem();
+    out_one_operand(0);
+    out_symbol(',');
+    OutChar(' ');
+    out_symbol('@');
+    out_one_operand(1);
+    break;
+case FR30_INSN_MUL:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
     OutChar(' ');
     out_one_operand(1);
     break;
-case CRIS_INSN_MULU:
+case FR30_INSN_MULU:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
     OutChar(' ');
     out_one_operand(1);
     break;
-case CRIS_INSN_MULH:
+case FR30_INSN_MULH:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
     OutChar(' ');
     out_one_operand(1);
     break;
-case CRIS_INSN_MULUH:
+case FR30_INSN_MULUH:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
     OutChar(' ');
     out_one_operand(1);
     break;
-case CRIS_INSN_DIV0S:
+case FR30_INSN_DIV0S:
     OutMnem();
     out_one_operand(0);
     break;
-case CRIS_INSN_DIV0U:
+case FR30_INSN_DIV0U:
     OutMnem();
-    cgen_outop(cmd.Op1, CRIS_OPERAND_RI, cmd.ea);
+    cgen_outop(cmd.Op1, FR30_OPERAND_RI, cmd.ea);
     break;
-case CRIS_INSN_DIV1:
-    OutMnem();
-    out_one_operand(0);
-    break;
-case CRIS_INSN_DIV2:
+case FR30_INSN_DIV1:
     OutMnem();
     out_one_operand(0);
     break;
-case CRIS_INSN_DIV3:
-    OutMnem();
-    break;
-case CRIS_INSN_DIV4S:
-    OutMnem();
-    break;
-case CRIS_INSN_LSL:
+case FR30_INSN_DIV2:
     OutMnem();
     out_one_operand(0);
-    out_symbol(',');
-    OutChar(' ');
-    out_one_operand(1);
     break;
-case CRIS_INSN_LSLI:
+case FR30_INSN_DIV3:
+    OutMnem();
+    break;
+case FR30_INSN_DIV4S:
+    OutMnem();
+    break;
+case FR30_INSN_LSL:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
     OutChar(' ');
     out_one_operand(1);
     break;
-case CRIS_INSN_LSL2:
+case FR30_INSN_LSLI:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
     OutChar(' ');
     out_one_operand(1);
     break;
-case CRIS_INSN_LSR:
+case FR30_INSN_LSL2:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
     OutChar(' ');
     out_one_operand(1);
     break;
-case CRIS_INSN_LSRI:
+case FR30_INSN_LSR:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
     OutChar(' ');
     out_one_operand(1);
     break;
-case CRIS_INSN_LSR2:
+case FR30_INSN_LSRI:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
     OutChar(' ');
     out_one_operand(1);
     break;
-case CRIS_INSN_ASR:
+case FR30_INSN_LSR2:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
     OutChar(' ');
     out_one_operand(1);
     break;
-case CRIS_INSN_ASRI:
+case FR30_INSN_ASR:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
     OutChar(' ');
     out_one_operand(1);
     break;
-case CRIS_INSN_ASR2:
+case FR30_INSN_ASRI:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
     OutChar(' ');
     out_one_operand(1);
     break;
-case CRIS_INSN_LDI8:
+case FR30_INSN_ASR2:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
     OutChar(' ');
     out_one_operand(1);
     break;
-case CRIS_INSN_LDI20:
+case FR30_INSN_LDI8:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
     OutChar(' ');
     out_one_operand(1);
     break;
-case CRIS_INSN_LDI32:
+case FR30_INSN_LDI20:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
     OutChar(' ');
     out_one_operand(1);
     break;
-case CRIS_INSN_LD:
+case FR30_INSN_LDI32:
+    OutMnem();
+    out_one_operand(0);
+    out_symbol(',');
+    OutChar(' ');
+    out_one_operand(1);
+    break;
+case FR30_INSN_LD:
     OutMnem();
     out_symbol('@');
     out_one_operand(0);
@@ -557,7 +557,7 @@ case CRIS_INSN_LD:
     OutChar(' ');
     out_one_operand(1);
     break;
-case CRIS_INSN_LDUH:
+case FR30_INSN_LDUH:
     OutMnem();
     out_symbol('@');
     out_one_operand(0);
@@ -565,7 +565,7 @@ case CRIS_INSN_LDUH:
     OutChar(' ');
     out_one_operand(1);
     break;
-case CRIS_INSN_LDUB:
+case FR30_INSN_LDUB:
     OutMnem();
     out_symbol('@');
     out_one_operand(0);
@@ -573,11 +573,11 @@ case CRIS_INSN_LDUB:
     OutChar(' ');
     out_one_operand(1);
     break;
-case CRIS_INSN_LDR13:
+case FR30_INSN_LDR13:
     OutMnem();
     out_symbol('@');
     out_symbol('(');
-    cgen_outop(cmd.Op1, CRIS_OPERAND_R13, cmd.ea);
+    cgen_outop(cmd.Op1, FR30_OPERAND_R13, cmd.ea);
     out_symbol(',');
     OutChar(' ');
     out_one_operand(1);
@@ -586,11 +586,11 @@ case CRIS_INSN_LDR13:
     OutChar(' ');
     out_one_operand(2);
     break;
-case CRIS_INSN_LDR13UH:
+case FR30_INSN_LDR13UH:
     OutMnem();
     out_symbol('@');
     out_symbol('(');
-    cgen_outop(cmd.Op1, CRIS_OPERAND_R13, cmd.ea);
+    cgen_outop(cmd.Op1, FR30_OPERAND_R13, cmd.ea);
     out_symbol(',');
     OutChar(' ');
     out_one_operand(1);
@@ -599,11 +599,11 @@ case CRIS_INSN_LDR13UH:
     OutChar(' ');
     out_one_operand(2);
     break;
-case CRIS_INSN_LDR13UB:
+case FR30_INSN_LDR13UB:
     OutMnem();
     out_symbol('@');
     out_symbol('(');
-    cgen_outop(cmd.Op1, CRIS_OPERAND_R13, cmd.ea);
+    cgen_outop(cmd.Op1, FR30_OPERAND_R13, cmd.ea);
     out_symbol(',');
     OutChar(' ');
     out_one_operand(1);
@@ -612,11 +612,11 @@ case CRIS_INSN_LDR13UB:
     OutChar(' ');
     out_one_operand(2);
     break;
-case CRIS_INSN_LDR14:
+case FR30_INSN_LDR14:
     OutMnem();
     out_symbol('@');
     out_symbol('(');
-    cgen_outop(cmd.Op1, CRIS_OPERAND_R14, cmd.ea);
+    cgen_outop(cmd.Op1, FR30_OPERAND_R14, cmd.ea);
     out_symbol(',');
     OutChar(' ');
     out_one_operand(1);
@@ -625,11 +625,11 @@ case CRIS_INSN_LDR14:
     OutChar(' ');
     out_one_operand(2);
     break;
-case CRIS_INSN_LDR14UH:
+case FR30_INSN_LDR14UH:
     OutMnem();
     out_symbol('@');
     out_symbol('(');
-    cgen_outop(cmd.Op1, CRIS_OPERAND_R14, cmd.ea);
+    cgen_outop(cmd.Op1, FR30_OPERAND_R14, cmd.ea);
     out_symbol(',');
     OutChar(' ');
     out_one_operand(1);
@@ -638,11 +638,11 @@ case CRIS_INSN_LDR14UH:
     OutChar(' ');
     out_one_operand(2);
     break;
-case CRIS_INSN_LDR14UB:
+case FR30_INSN_LDR14UB:
     OutMnem();
     out_symbol('@');
     out_symbol('(');
-    cgen_outop(cmd.Op1, CRIS_OPERAND_R14, cmd.ea);
+    cgen_outop(cmd.Op1, FR30_OPERAND_R14, cmd.ea);
     out_symbol(',');
     OutChar(' ');
     out_one_operand(1);
@@ -651,11 +651,11 @@ case CRIS_INSN_LDR14UB:
     OutChar(' ');
     out_one_operand(2);
     break;
-case CRIS_INSN_LDR15:
+case FR30_INSN_LDR15:
     OutMnem();
     out_symbol('@');
     out_symbol('(');
-    cgen_outop(cmd.Op1, CRIS_OPERAND_R15, cmd.ea);
+    cgen_outop(cmd.Op1, FR30_OPERAND_R15, cmd.ea);
     out_symbol(',');
     OutChar(' ');
     out_one_operand(1);
@@ -664,34 +664,34 @@ case CRIS_INSN_LDR15:
     OutChar(' ');
     out_one_operand(2);
     break;
-case CRIS_INSN_LDR15GR:
+case FR30_INSN_LDR15GR:
     OutMnem();
     out_symbol('@');
-    cgen_outop(cmd.Op1, CRIS_OPERAND_R15, cmd.ea);
+    cgen_outop(cmd.Op1, FR30_OPERAND_R15, cmd.ea);
     out_symbol('+');
     out_symbol(',');
     OutChar(' ');
     out_one_operand(1);
     break;
-case CRIS_INSN_LDR15DR:
+case FR30_INSN_LDR15DR:
     OutMnem();
     out_symbol('@');
-    cgen_outop(cmd.Op1, CRIS_OPERAND_R15, cmd.ea);
+    cgen_outop(cmd.Op1, FR30_OPERAND_R15, cmd.ea);
     out_symbol('+');
     out_symbol(',');
     OutChar(' ');
     out_one_operand(1);
     break;
-case CRIS_INSN_LDR15PS:
+case FR30_INSN_LDR15PS:
     OutMnem();
     out_symbol('@');
-    cgen_outop(cmd.Op1, CRIS_OPERAND_R15, cmd.ea);
+    cgen_outop(cmd.Op1, FR30_OPERAND_R15, cmd.ea);
     out_symbol('+');
     out_symbol(',');
     OutChar(' ');
-    cgen_outop(cmd.Op2, CRIS_OPERAND_PS, cmd.ea);
+    cgen_outop(cmd.Op2, FR30_OPERAND_PS, cmd.ea);
     break;
-case CRIS_INSN_ST:
+case FR30_INSN_ST:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
@@ -699,7 +699,7 @@ case CRIS_INSN_ST:
     out_symbol('@');
     out_one_operand(1);
     break;
-case CRIS_INSN_STH:
+case FR30_INSN_STH:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
@@ -707,7 +707,7 @@ case CRIS_INSN_STH:
     out_symbol('@');
     out_one_operand(1);
     break;
-case CRIS_INSN_STB:
+case FR30_INSN_STB:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
@@ -715,450 +715,450 @@ case CRIS_INSN_STB:
     out_symbol('@');
     out_one_operand(1);
     break;
-case CRIS_INSN_STR13:
+case FR30_INSN_STR13:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
     OutChar(' ');
     out_symbol('@');
     out_symbol('(');
-    cgen_outop(cmd.Op2, CRIS_OPERAND_R13, cmd.ea);
+    cgen_outop(cmd.Op2, FR30_OPERAND_R13, cmd.ea);
     out_symbol(',');
     OutChar(' ');
     out_one_operand(2);
     out_symbol(')');
     break;
-case CRIS_INSN_STR13H:
+case FR30_INSN_STR13H:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
     OutChar(' ');
     out_symbol('@');
     out_symbol('(');
-    cgen_outop(cmd.Op2, CRIS_OPERAND_R13, cmd.ea);
+    cgen_outop(cmd.Op2, FR30_OPERAND_R13, cmd.ea);
     out_symbol(',');
     OutChar(' ');
     out_one_operand(2);
     out_symbol(')');
     break;
-case CRIS_INSN_STR13B:
+case FR30_INSN_STR13B:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
     OutChar(' ');
     out_symbol('@');
     out_symbol('(');
-    cgen_outop(cmd.Op2, CRIS_OPERAND_R13, cmd.ea);
+    cgen_outop(cmd.Op2, FR30_OPERAND_R13, cmd.ea);
     out_symbol(',');
     OutChar(' ');
     out_one_operand(2);
     out_symbol(')');
     break;
-case CRIS_INSN_STR14:
+case FR30_INSN_STR14:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
     OutChar(' ');
     out_symbol('@');
     out_symbol('(');
-    cgen_outop(cmd.Op2, CRIS_OPERAND_R14, cmd.ea);
+    cgen_outop(cmd.Op2, FR30_OPERAND_R14, cmd.ea);
     out_symbol(',');
     OutChar(' ');
     out_one_operand(2);
     out_symbol(')');
     break;
-case CRIS_INSN_STR14H:
+case FR30_INSN_STR14H:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
     OutChar(' ');
     out_symbol('@');
     out_symbol('(');
-    cgen_outop(cmd.Op2, CRIS_OPERAND_R14, cmd.ea);
+    cgen_outop(cmd.Op2, FR30_OPERAND_R14, cmd.ea);
     out_symbol(',');
     OutChar(' ');
     out_one_operand(2);
     out_symbol(')');
     break;
-case CRIS_INSN_STR14B:
+case FR30_INSN_STR14B:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
     OutChar(' ');
     out_symbol('@');
     out_symbol('(');
-    cgen_outop(cmd.Op2, CRIS_OPERAND_R14, cmd.ea);
+    cgen_outop(cmd.Op2, FR30_OPERAND_R14, cmd.ea);
     out_symbol(',');
     OutChar(' ');
     out_one_operand(2);
     out_symbol(')');
     break;
-case CRIS_INSN_STR15:
+case FR30_INSN_STR15:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
     OutChar(' ');
     out_symbol('@');
     out_symbol('(');
-    cgen_outop(cmd.Op2, CRIS_OPERAND_R15, cmd.ea);
+    cgen_outop(cmd.Op2, FR30_OPERAND_R15, cmd.ea);
     out_symbol(',');
     OutChar(' ');
     out_one_operand(2);
     out_symbol(')');
     break;
-case CRIS_INSN_STR15GR:
+case FR30_INSN_STR15GR:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
     OutChar(' ');
     out_symbol('@');
     out_symbol('-');
-    cgen_outop(cmd.Op2, CRIS_OPERAND_R15, cmd.ea);
+    cgen_outop(cmd.Op2, FR30_OPERAND_R15, cmd.ea);
     break;
-case CRIS_INSN_STR15DR:
+case FR30_INSN_STR15DR:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
     OutChar(' ');
     out_symbol('@');
     out_symbol('-');
-    cgen_outop(cmd.Op2, CRIS_OPERAND_R15, cmd.ea);
+    cgen_outop(cmd.Op2, FR30_OPERAND_R15, cmd.ea);
     break;
-case CRIS_INSN_STR15PS:
+case FR30_INSN_STR15PS:
     OutMnem();
-    cgen_outop(cmd.Op1, CRIS_OPERAND_PS, cmd.ea);
+    cgen_outop(cmd.Op1, FR30_OPERAND_PS, cmd.ea);
     out_symbol(',');
     OutChar(' ');
     out_symbol('@');
     out_symbol('-');
-    cgen_outop(cmd.Op2, CRIS_OPERAND_R15, cmd.ea);
+    cgen_outop(cmd.Op2, FR30_OPERAND_R15, cmd.ea);
     break;
-case CRIS_INSN_MOV:
+case FR30_INSN_MOV:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
     OutChar(' ');
     out_one_operand(1);
     break;
-case CRIS_INSN_MOVDR:
+case FR30_INSN_MOVDR:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
     OutChar(' ');
     out_one_operand(1);
     break;
-case CRIS_INSN_MOVPS:
+case FR30_INSN_MOVPS:
     OutMnem();
-    cgen_outop(cmd.Op1, CRIS_OPERAND_PS, cmd.ea);
+    cgen_outop(cmd.Op1, FR30_OPERAND_PS, cmd.ea);
     out_symbol(',');
     OutChar(' ');
     out_one_operand(1);
     break;
-case CRIS_INSN_MOV2DR:
+case FR30_INSN_MOV2DR:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
     OutChar(' ');
     out_one_operand(1);
     break;
-case CRIS_INSN_MOV2PS:
+case FR30_INSN_MOV2PS:
     OutMnem();
     out_one_operand(0);
     out_symbol(',');
     OutChar(' ');
-    cgen_outop(cmd.Op2, CRIS_OPERAND_PS, cmd.ea);
+    cgen_outop(cmd.Op2, FR30_OPERAND_PS, cmd.ea);
     break;
-case CRIS_INSN_JMP:
+case FR30_INSN_JMP:
     OutMnem();
     out_symbol('@');
     out_one_operand(0);
     break;
-case CRIS_INSN_JMPD:
+case FR30_INSN_JMPD:
     OutMnem();
     out_symbol('@');
     out_one_operand(0);
     break;
-case CRIS_INSN_CALLR:
+case FR30_INSN_CALLR:
     OutMnem();
     out_symbol('@');
     out_one_operand(0);
     break;
-case CRIS_INSN_CALLRD:
+case FR30_INSN_CALLRD:
     OutMnem();
     out_symbol('@');
     out_one_operand(0);
     break;
-case CRIS_INSN_CALL:
+case FR30_INSN_CALL:
     OutMnem();
     out_one_operand(0);
     break;
-case CRIS_INSN_CALLD:
+case FR30_INSN_CALLD:
     OutMnem();
     out_one_operand(0);
     break;
-case CRIS_INSN_RET:
+case FR30_INSN_RET:
     OutMnem();
     break;
-case CRIS_INSN_RET_D:
+case FR30_INSN_RET_D:
     OutMnem();
     break;
-case CRIS_INSN_INT:
+case FR30_INSN_INT:
     OutMnem();
     out_one_operand(0);
     break;
-case CRIS_INSN_INTE:
+case FR30_INSN_INTE:
     OutMnem();
     break;
-case CRIS_INSN_RETI:
+case FR30_INSN_RETI:
     OutMnem();
     break;
-case CRIS_INSN_BRAD:
+case FR30_INSN_BRAD:
     OutMnem();
     out_one_operand(0);
     break;
-case CRIS_INSN_BRA:
+case FR30_INSN_BRA:
     OutMnem();
     out_one_operand(0);
     break;
-case CRIS_INSN_BNOD:
+case FR30_INSN_BNOD:
     OutMnem();
-    cgen_outop(cmd.Op1, CRIS_OPERAND_LABEL9, cmd.ea);
+    cgen_outop(cmd.Op1, FR30_OPERAND_LABEL9, cmd.ea);
     break;
-case CRIS_INSN_BNO:
+case FR30_INSN_BNO:
     OutMnem();
-    cgen_outop(cmd.Op1, CRIS_OPERAND_LABEL9, cmd.ea);
+    cgen_outop(cmd.Op1, FR30_OPERAND_LABEL9, cmd.ea);
     break;
-case CRIS_INSN_BEQD:
+case FR30_INSN_BEQD:
     OutMnem();
     out_one_operand(0);
     break;
-case CRIS_INSN_BEQ:
+case FR30_INSN_BEQ:
     OutMnem();
     out_one_operand(0);
     break;
-case CRIS_INSN_BNED:
+case FR30_INSN_BNED:
     OutMnem();
     out_one_operand(0);
     break;
-case CRIS_INSN_BNE:
+case FR30_INSN_BNE:
     OutMnem();
     out_one_operand(0);
     break;
-case CRIS_INSN_BCD:
+case FR30_INSN_BCD:
     OutMnem();
     out_one_operand(0);
     break;
-case CRIS_INSN_BC:
+case FR30_INSN_BC:
     OutMnem();
     out_one_operand(0);
     break;
-case CRIS_INSN_BNCD:
+case FR30_INSN_BNCD:
     OutMnem();
     out_one_operand(0);
     break;
-case CRIS_INSN_BNC:
+case FR30_INSN_BNC:
     OutMnem();
     out_one_operand(0);
     break;
-case CRIS_INSN_BND:
+case FR30_INSN_BND:
     OutMnem();
     out_one_operand(0);
     break;
-case CRIS_INSN_BN:
+case FR30_INSN_BN:
     OutMnem();
     out_one_operand(0);
     break;
-case CRIS_INSN_BPD:
+case FR30_INSN_BPD:
     OutMnem();
     out_one_operand(0);
     break;
-case CRIS_INSN_BP:
+case FR30_INSN_BP:
     OutMnem();
     out_one_operand(0);
     break;
-case CRIS_INSN_BVD:
+case FR30_INSN_BVD:
     OutMnem();
     out_one_operand(0);
     break;
-case CRIS_INSN_BV:
+case FR30_INSN_BV:
     OutMnem();
     out_one_operand(0);
     break;
-case CRIS_INSN_BNVD:
+case FR30_INSN_BNVD:
     OutMnem();
     out_one_operand(0);
     break;
-case CRIS_INSN_BNV:
+case FR30_INSN_BNV:
     OutMnem();
     out_one_operand(0);
     break;
-case CRIS_INSN_BLTD:
+case FR30_INSN_BLTD:
     OutMnem();
     out_one_operand(0);
     break;
-case CRIS_INSN_BLT:
+case FR30_INSN_BLT:
     OutMnem();
     out_one_operand(0);
     break;
-case CRIS_INSN_BGED:
+case FR30_INSN_BGED:
     OutMnem();
     out_one_operand(0);
     break;
-case CRIS_INSN_BGE:
+case FR30_INSN_BGE:
     OutMnem();
     out_one_operand(0);
     break;
-case CRIS_INSN_BLED:
+case FR30_INSN_BLED:
     OutMnem();
     out_one_operand(0);
     break;
-case CRIS_INSN_BLE:
+case FR30_INSN_BLE:
     OutMnem();
     out_one_operand(0);
     break;
-case CRIS_INSN_BGTD:
+case FR30_INSN_BGTD:
     OutMnem();
     out_one_operand(0);
     break;
-case CRIS_INSN_BGT:
+case FR30_INSN_BGT:
     OutMnem();
     out_one_operand(0);
     break;
-case CRIS_INSN_BLSD:
+case FR30_INSN_BLSD:
     OutMnem();
     out_one_operand(0);
     break;
-case CRIS_INSN_BLS:
+case FR30_INSN_BLS:
     OutMnem();
     out_one_operand(0);
     break;
-case CRIS_INSN_BHID:
+case FR30_INSN_BHID:
     OutMnem();
     out_one_operand(0);
     break;
-case CRIS_INSN_BHI:
+case FR30_INSN_BHI:
     OutMnem();
     out_one_operand(0);
     break;
-case CRIS_INSN_DMOVR13:
+case FR30_INSN_DMOVR13:
     OutMnem();
-    cgen_outop(cmd.Op1, CRIS_OPERAND_R13, cmd.ea);
-    out_symbol(',');
-    OutChar(' ');
-    out_symbol('@');
-    out_one_operand(1);
-    break;
-case CRIS_INSN_DMOVR13H:
-    OutMnem();
-    cgen_outop(cmd.Op1, CRIS_OPERAND_R13, cmd.ea);
+    cgen_outop(cmd.Op1, FR30_OPERAND_R13, cmd.ea);
     out_symbol(',');
     OutChar(' ');
     out_symbol('@');
     out_one_operand(1);
     break;
-case CRIS_INSN_DMOVR13B:
+case FR30_INSN_DMOVR13H:
     OutMnem();
-    cgen_outop(cmd.Op1, CRIS_OPERAND_R13, cmd.ea);
+    cgen_outop(cmd.Op1, FR30_OPERAND_R13, cmd.ea);
     out_symbol(',');
     OutChar(' ');
     out_symbol('@');
     out_one_operand(1);
     break;
-case CRIS_INSN_DMOVR13PI:
+case FR30_INSN_DMOVR13B:
+    OutMnem();
+    cgen_outop(cmd.Op1, FR30_OPERAND_R13, cmd.ea);
+    out_symbol(',');
+    OutChar(' ');
+    out_symbol('@');
+    out_one_operand(1);
+    break;
+case FR30_INSN_DMOVR13PI:
     OutMnem();
     out_symbol('@');
-    cgen_outop(cmd.Op1, CRIS_OPERAND_R13, cmd.ea);
+    cgen_outop(cmd.Op1, FR30_OPERAND_R13, cmd.ea);
     out_symbol('+');
     out_symbol(',');
     OutChar(' ');
     out_symbol('@');
     out_one_operand(1);
     break;
-case CRIS_INSN_DMOVR13PIH:
+case FR30_INSN_DMOVR13PIH:
     OutMnem();
     out_symbol('@');
-    cgen_outop(cmd.Op1, CRIS_OPERAND_R13, cmd.ea);
+    cgen_outop(cmd.Op1, FR30_OPERAND_R13, cmd.ea);
     out_symbol('+');
     out_symbol(',');
     OutChar(' ');
     out_symbol('@');
     out_one_operand(1);
     break;
-case CRIS_INSN_DMOVR13PIB:
+case FR30_INSN_DMOVR13PIB:
     OutMnem();
     out_symbol('@');
-    cgen_outop(cmd.Op1, CRIS_OPERAND_R13, cmd.ea);
+    cgen_outop(cmd.Op1, FR30_OPERAND_R13, cmd.ea);
     out_symbol('+');
     out_symbol(',');
     OutChar(' ');
     out_symbol('@');
     out_one_operand(1);
     break;
-case CRIS_INSN_DMOVR15PI:
+case FR30_INSN_DMOVR15PI:
     OutMnem();
     out_symbol('@');
-    cgen_outop(cmd.Op1, CRIS_OPERAND_R15, cmd.ea);
+    cgen_outop(cmd.Op1, FR30_OPERAND_R15, cmd.ea);
     out_symbol('+');
     out_symbol(',');
     OutChar(' ');
     out_symbol('@');
     out_one_operand(1);
     break;
-case CRIS_INSN_DMOV2R13:
+case FR30_INSN_DMOV2R13:
     OutMnem();
     out_symbol('@');
     out_one_operand(0);
     out_symbol(',');
     OutChar(' ');
-    cgen_outop(cmd.Op2, CRIS_OPERAND_R13, cmd.ea);
+    cgen_outop(cmd.Op2, FR30_OPERAND_R13, cmd.ea);
     break;
-case CRIS_INSN_DMOV2R13H:
+case FR30_INSN_DMOV2R13H:
     OutMnem();
     out_symbol('@');
     out_one_operand(0);
     out_symbol(',');
     OutChar(' ');
-    cgen_outop(cmd.Op2, CRIS_OPERAND_R13, cmd.ea);
+    cgen_outop(cmd.Op2, FR30_OPERAND_R13, cmd.ea);
     break;
-case CRIS_INSN_DMOV2R13B:
+case FR30_INSN_DMOV2R13B:
     OutMnem();
     out_symbol('@');
     out_one_operand(0);
     out_symbol(',');
     OutChar(' ');
-    cgen_outop(cmd.Op2, CRIS_OPERAND_R13, cmd.ea);
+    cgen_outop(cmd.Op2, FR30_OPERAND_R13, cmd.ea);
     break;
-case CRIS_INSN_DMOV2R13PI:
+case FR30_INSN_DMOV2R13PI:
     OutMnem();
     out_symbol('@');
     out_one_operand(0);
     out_symbol(',');
     OutChar(' ');
     out_symbol('@');
-    cgen_outop(cmd.Op2, CRIS_OPERAND_R13, cmd.ea);
+    cgen_outop(cmd.Op2, FR30_OPERAND_R13, cmd.ea);
     out_symbol('+');
     break;
-case CRIS_INSN_DMOV2R13PIH:
+case FR30_INSN_DMOV2R13PIH:
     OutMnem();
     out_symbol('@');
     out_one_operand(0);
     out_symbol(',');
     OutChar(' ');
     out_symbol('@');
-    cgen_outop(cmd.Op2, CRIS_OPERAND_R13, cmd.ea);
+    cgen_outop(cmd.Op2, FR30_OPERAND_R13, cmd.ea);
     out_symbol('+');
     break;
-case CRIS_INSN_DMOV2R13PIB:
+case FR30_INSN_DMOV2R13PIB:
     OutMnem();
     out_symbol('@');
     out_one_operand(0);
     out_symbol(',');
     OutChar(' ');
     out_symbol('@');
-    cgen_outop(cmd.Op2, CRIS_OPERAND_R13, cmd.ea);
+    cgen_outop(cmd.Op2, FR30_OPERAND_R13, cmd.ea);
     out_symbol('+');
     break;
-case CRIS_INSN_DMOV2R15PD:
+case FR30_INSN_DMOV2R15PD:
     OutMnem();
     out_symbol('@');
     out_one_operand(0);
@@ -1166,145 +1166,145 @@ case CRIS_INSN_DMOV2R15PD:
     OutChar(' ');
     out_symbol('@');
     out_symbol('-');
-    cgen_outop(cmd.Op2, CRIS_OPERAND_R15, cmd.ea);
+    cgen_outop(cmd.Op2, FR30_OPERAND_R15, cmd.ea);
     break;
-case CRIS_INSN_LDRES:
+case FR30_INSN_LDRES:
     OutMnem();
     out_symbol('@');
     out_one_operand(0);
     out_symbol('+');
     out_symbol(',');
     OutChar(' ');
-    cgen_outop(cmd.Op2, CRIS_OPERAND_U4, cmd.ea);
+    cgen_outop(cmd.Op2, FR30_OPERAND_U4, cmd.ea);
     break;
-case CRIS_INSN_STRES:
+case FR30_INSN_STRES:
     OutMnem();
-    cgen_outop(cmd.Op1, CRIS_OPERAND_U4, cmd.ea);
+    cgen_outop(cmd.Op1, FR30_OPERAND_U4, cmd.ea);
     out_symbol(',');
     OutChar(' ');
     out_symbol('@');
     out_one_operand(1);
     out_symbol('+');
     break;
-case CRIS_INSN_COPOP:
+case FR30_INSN_COPOP:
     OutMnem();
-    cgen_outop(cmd.Op1, CRIS_OPERAND_U4C, cmd.ea);
+    cgen_outop(cmd.Op1, FR30_OPERAND_U4C, cmd.ea);
     out_symbol(',');
     OutChar(' ');
-    cgen_outop(cmd.Op2, CRIS_OPERAND_CCC, cmd.ea);
+    cgen_outop(cmd.Op2, FR30_OPERAND_CCC, cmd.ea);
     out_symbol(',');
     OutChar(' ');
-    cgen_outop(cmd.Op3, CRIS_OPERAND_CRJ, cmd.ea);
+    cgen_outop(cmd.Op3, FR30_OPERAND_CRJ, cmd.ea);
     out_symbol(',');
     OutChar(' ');
-    cgen_outop(cmd.Op4, CRIS_OPERAND_CRI, cmd.ea);
+    cgen_outop(cmd.Op4, FR30_OPERAND_CRI, cmd.ea);
     break;
-case CRIS_INSN_COPLD:
+case FR30_INSN_COPLD:
     OutMnem();
-    cgen_outop(cmd.Op1, CRIS_OPERAND_U4C, cmd.ea);
+    cgen_outop(cmd.Op1, FR30_OPERAND_U4C, cmd.ea);
     out_symbol(',');
     OutChar(' ');
-    cgen_outop(cmd.Op2, CRIS_OPERAND_CCC, cmd.ea);
+    cgen_outop(cmd.Op2, FR30_OPERAND_CCC, cmd.ea);
     out_symbol(',');
     OutChar(' ');
-    cgen_outop(cmd.Op3, CRIS_OPERAND_RJC, cmd.ea);
+    cgen_outop(cmd.Op3, FR30_OPERAND_RJC, cmd.ea);
     out_symbol(',');
     OutChar(' ');
-    cgen_outop(cmd.Op4, CRIS_OPERAND_CRI, cmd.ea);
+    cgen_outop(cmd.Op4, FR30_OPERAND_CRI, cmd.ea);
     break;
-case CRIS_INSN_COPST:
+case FR30_INSN_COPST:
     OutMnem();
-    cgen_outop(cmd.Op1, CRIS_OPERAND_U4C, cmd.ea);
+    cgen_outop(cmd.Op1, FR30_OPERAND_U4C, cmd.ea);
     out_symbol(',');
     OutChar(' ');
-    cgen_outop(cmd.Op2, CRIS_OPERAND_CCC, cmd.ea);
+    cgen_outop(cmd.Op2, FR30_OPERAND_CCC, cmd.ea);
     out_symbol(',');
     OutChar(' ');
-    cgen_outop(cmd.Op3, CRIS_OPERAND_CRJ, cmd.ea);
+    cgen_outop(cmd.Op3, FR30_OPERAND_CRJ, cmd.ea);
     out_symbol(',');
     OutChar(' ');
-    cgen_outop(cmd.Op4, CRIS_OPERAND_RIC, cmd.ea);
+    cgen_outop(cmd.Op4, FR30_OPERAND_RIC, cmd.ea);
     break;
-case CRIS_INSN_COPSV:
+case FR30_INSN_COPSV:
     OutMnem();
-    cgen_outop(cmd.Op1, CRIS_OPERAND_U4C, cmd.ea);
+    cgen_outop(cmd.Op1, FR30_OPERAND_U4C, cmd.ea);
     out_symbol(',');
     OutChar(' ');
-    cgen_outop(cmd.Op2, CRIS_OPERAND_CCC, cmd.ea);
+    cgen_outop(cmd.Op2, FR30_OPERAND_CCC, cmd.ea);
     out_symbol(',');
     OutChar(' ');
-    cgen_outop(cmd.Op3, CRIS_OPERAND_CRJ, cmd.ea);
+    cgen_outop(cmd.Op3, FR30_OPERAND_CRJ, cmd.ea);
     out_symbol(',');
     OutChar(' ');
-    cgen_outop(cmd.Op4, CRIS_OPERAND_RIC, cmd.ea);
+    cgen_outop(cmd.Op4, FR30_OPERAND_RIC, cmd.ea);
     break;
-case CRIS_INSN_NOP:
+case FR30_INSN_NOP:
     OutMnem();
     break;
-case CRIS_INSN_ANDCCR:
+case FR30_INSN_ANDCCR:
     OutMnem();
     out_one_operand(0);
     break;
-case CRIS_INSN_ORCCR:
+case FR30_INSN_ORCCR:
     OutMnem();
     out_one_operand(0);
     break;
-case CRIS_INSN_STILM:
+case FR30_INSN_STILM:
     OutMnem();
     out_one_operand(0);
     break;
-case CRIS_INSN_ADDSP:
+case FR30_INSN_ADDSP:
     OutMnem();
     out_one_operand(0);
     break;
-case CRIS_INSN_EXTSB:
+case FR30_INSN_EXTSB:
     OutMnem();
     out_one_operand(0);
     break;
-case CRIS_INSN_EXTUB:
+case FR30_INSN_EXTUB:
     OutMnem();
     out_one_operand(0);
     break;
-case CRIS_INSN_EXTSH:
+case FR30_INSN_EXTSH:
     OutMnem();
     out_one_operand(0);
     break;
-case CRIS_INSN_EXTUH:
+case FR30_INSN_EXTUH:
     OutMnem();
     out_one_operand(0);
     break;
-case CRIS_INSN_LDM0:
+case FR30_INSN_LDM0:
     OutMnem();
     out_symbol('(');
     out_one_operand(0);
     out_symbol(')');
     break;
-case CRIS_INSN_LDM1:
+case FR30_INSN_LDM1:
     OutMnem();
     out_symbol('(');
     out_one_operand(0);
     out_symbol(')');
     break;
-case CRIS_INSN_STM0:
+case FR30_INSN_STM0:
     OutMnem();
     out_symbol('(');
     out_one_operand(0);
     out_symbol(')');
     break;
-case CRIS_INSN_STM1:
+case FR30_INSN_STM1:
     OutMnem();
     out_symbol('(');
     out_one_operand(0);
     out_symbol(')');
     break;
-case CRIS_INSN_ENTER:
+case FR30_INSN_ENTER:
     OutMnem();
     out_one_operand(0);
     break;
-case CRIS_INSN_LEAVE:
+case FR30_INSN_LEAVE:
     OutMnem();
     break;
-case CRIS_INSN_XCHB:
+case FR30_INSN_XCHB:
     OutMnem();
     out_symbol('@');
     out_one_operand(0);

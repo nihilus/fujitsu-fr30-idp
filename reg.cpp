@@ -1,4 +1,4 @@
-/* CRIS IDP registers
+/* FR30 IDP registers
 
 THIS FILE IS MACHINE GENERATED WITH CGEN.
 

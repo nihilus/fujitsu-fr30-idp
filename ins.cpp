@@ -1,4 +1,4 @@
-/* CRIS IDP instructions
+/* FR30 IDP instructions
 
 THIS FILE IS MACHINE GENERATED WITH CGEN.
 
